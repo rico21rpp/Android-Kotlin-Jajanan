@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.fragment_menu_category.view.*
 import java.util.zip.Inflater
 
 class MenuCategoryViewHolder(inflater: LayoutInflater, parent: ViewGroup)
-    : RecyclerView.ViewHolder(inflater.inflate(R.layout.menu_category_list_item)) {
+    : RecyclerView.ViewHolder(inflater.inflate(R.layout.menu_category_list_item, parent, false)) {
 
     private var menuNameTextView: TextView? = null
 
