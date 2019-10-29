@@ -8,7 +8,8 @@ class LoginActivityViewModel : ViewModel() {
     var username: String? = null
     var password: String? = null
 
-    fun onLoginBtnClicked() {
-        Log.d("TEST: ", username + " - " + password)
+    fun onLoginBtnClicked() : Boolean {
+        if (username == "user" && password == "pass123") return true
+        return false
     }
 }

@@ -3,6 +3,7 @@ package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.views
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -25,9 +26,15 @@ class LoginActivity : AppCompatActivity() {
 
     fun onLoginBtnClicked(v: View) {
 
-        viewmodel.onLoginBtnClicked()
+        if (viewmodel.onLoginBtnClicked()) {
+            val intent = Intent(this, MenuCategoryActivity::class.java)
+            startActivity(intent)
+        }
+        else {
+            // tampilkan dialog bahwa password salah
+            Log.d("TEST: ", "username/password salah")
+        }
 
-        val intent = Intent(this, MenuCategoryActivity::class.java)
-        startActivity(intent)
+
     }
 }
