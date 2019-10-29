@@ -34,7 +34,10 @@ class LoginActivity : AppCompatActivity() {
             // tampilkan dialog bahwa password salah
             Log.d("TEST: ", "username/password salah")
         }
+    }
 
-
+    fun onSignupBtnClicked(v: View) {
+        val intent = Intent(this, SignupActivity::class.java)
+        startActivity(intent)
     }
 }
