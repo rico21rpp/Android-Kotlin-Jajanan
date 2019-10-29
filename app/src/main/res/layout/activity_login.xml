@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-<!--    <data>-->
-<!--        <variable-->
-<!--            name="vm"-->
-<!--            type="id.ac." />-->
-<!--    </data>-->
+    <data>
+        <variable
+            name="vm"
+            type="id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.viewmodels.LoginActivityViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -15,6 +16,7 @@
 
         <EditText
             android:id="@+id/editText"
+            android:text="@={vm.username}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -27,6 +29,7 @@
 
         <EditText
             android:id="@+id/editText4"
+            android:text="@={vm.password}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -43,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="LOG IN"
+            android:onClick="onLoginBtnClicked"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText4" />

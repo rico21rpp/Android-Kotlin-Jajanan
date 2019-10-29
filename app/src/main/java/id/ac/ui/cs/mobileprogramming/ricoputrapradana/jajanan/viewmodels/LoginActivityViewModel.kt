@@ -1,11 +1,14 @@
 package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 
 class LoginActivityViewModel : ViewModel() {
 
-    val username: String? = null
-    val password: String? = null
+    var username: String? = null
+    var password: String? = null
 
-
+    fun onLoginBtnClicked() {
+        Log.d("TEST: ", username + " - " + password)
+    }
 }
