@@ -1,5 +1,6 @@
 package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -18,5 +19,8 @@ class ListMenuCategoryAdapter(private val list: List<MenuCategory>) : RecyclerVi
         holder.bind(category)
     }
 
-    override fun getItemCount(): Int = list.size
+    override fun getItemCount(): Int {
+        Log.d("TEST: ", "list size = " + list.size)
+        return list.size
+    }
 }
