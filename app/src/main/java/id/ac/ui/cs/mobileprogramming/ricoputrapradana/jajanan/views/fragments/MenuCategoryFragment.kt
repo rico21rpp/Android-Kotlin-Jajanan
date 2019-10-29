@@ -8,12 +8,22 @@ import android.view.View
 import android.view.ViewGroup
 
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.R
+import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.models.MenuCategory
 
 class MenuCategoryFragment : Fragment() {
 
+    private val categories = listOf(
+        MenuCategory("FOOD"),
+        MenuCategory("DRINK")
+    )
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        retainInstance = true
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_menu_category, container, false)
     }
 
