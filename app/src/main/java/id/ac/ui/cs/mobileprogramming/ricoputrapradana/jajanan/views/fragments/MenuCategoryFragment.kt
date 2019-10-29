@@ -17,8 +17,7 @@ class MenuCategoryFragment : Fragment() {
 
     private val categories = listOf(
         MenuCategory("FOOD"),
-        MenuCategory("DRINK"),
-        MenuCategory("Sesuatu")
+        MenuCategory("DRINK")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -14,6 +14,9 @@ class MenuCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_category)
 
+        actionBar?.title = "Menu Category"
+        supportActionBar?.title = "Menu Category"
+
         val menuCategoryFragment = MenuCategoryFragment()
         fragmentTransaction.add(R.id.menu_category_fragment, menuCategoryFragment)
         fragmentTransaction.commit()
