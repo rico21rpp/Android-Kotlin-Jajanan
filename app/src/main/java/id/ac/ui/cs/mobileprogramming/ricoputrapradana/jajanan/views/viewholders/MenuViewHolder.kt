@@ -22,7 +22,7 @@ class MenuViewHolder(inflater: LayoutInflater, parent: ViewGroup)
         menuPrice = itemView.findViewById(R.id.menu_price)
     }
 
-    fun bind(menu: Menu, context: Context) {
+    fun bind(menu: Menu) {
 
 //        val drawableId: Int = context.resources.getIdentifier()
         menuName?.text = menu.menuName

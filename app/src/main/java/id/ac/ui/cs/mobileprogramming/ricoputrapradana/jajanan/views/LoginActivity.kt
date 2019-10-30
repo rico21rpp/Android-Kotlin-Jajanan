@@ -27,7 +27,8 @@ class LoginActivity : AppCompatActivity() {
     fun onLoginBtnClicked(v: View) {
 
         if (viewmodel.onLoginBtnClicked()) {
-            val intent = Intent(this, MenuCategoryActivity::class.java)
+//            val intent = Intent(this, MenuCategoryActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
         else {
