@@ -38,10 +38,11 @@
     <Button
         android:text="TAMBAH"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="24dp"
         android:layout_weight="1"
         android:layout_gravity="bottom"
-        android:background="#00ff00"
+        android:layout_marginBottom="4dp"
+        android:background="#08AE9E"
         android:textColor="#ffffff"/>
 
 </LinearLayout>

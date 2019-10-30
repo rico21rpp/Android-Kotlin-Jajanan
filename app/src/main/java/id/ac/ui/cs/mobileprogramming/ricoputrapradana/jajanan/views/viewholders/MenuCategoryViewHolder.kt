@@ -19,7 +19,9 @@ class MenuCategoryViewHolder(inflater: LayoutInflater, parent: ViewGroup)
         menuNameTextView = itemView.findViewById(R.id.item_name)
     }
 
-    fun bind(menu: MenuCategory) {
+    fun bind(menu: MenuCategory, clickListener: (MenuCategory) -> Unit) {
         menuNameTextView?.text = menu.category
+
+        itemView.setOnClickListener { clickListener(menu) }
     }
 }
