@@ -1,8 +1,8 @@
 package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.auth
 
-import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModel
+import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.data.repository.UserRepository
 
 class AuthViewModel : ViewModel() {
 
@@ -17,6 +17,9 @@ class AuthViewModel : ViewModel() {
             authListener?.onFailure("Invalid email/password")
             return
         }
-        authListener?.onSuccess()
+
+        val loginResponse = UserRepository().userLogin(username!!, password!!)
+
+        authListener?.onSuccess(loginResponse)
     }
 }
