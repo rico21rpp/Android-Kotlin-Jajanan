@@ -16,6 +16,6 @@ interface UserDao {
     fun getUser(): LiveData<User>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertOrUpdate(user: User): Long
+    suspend fun insertOrUpdate(user: User): Long
 
 }
