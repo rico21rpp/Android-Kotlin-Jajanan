@@ -3,6 +3,7 @@ package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.auth
 import android.view.View
 import androidx.lifecycle.ViewModel
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.data.repository.UserRepository
+import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.utils.Coroutines
 
 class AuthViewModel : ViewModel() {
 
@@ -18,8 +19,14 @@ class AuthViewModel : ViewModel() {
             return
         }
 
-        val loginResponse = UserRepository().userLogin(username!!, password!!)
-
-        authListener?.onSuccess(loginResponse)
+        Coroutines.main {
+            val response = UserRepository().userLogin(username!!, password!!)
+            if (response.isSuccessful) {
+                authListener?.onSuccess(response.body()?.user!!)
+            }
+            else {
+                authListener?.onFailure("Error Code: ${response.code()}")
+            }
+        }
     }
 }

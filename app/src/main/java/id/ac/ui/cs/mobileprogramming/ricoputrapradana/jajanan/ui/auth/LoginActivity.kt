@@ -10,6 +10,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.R
+import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.data.db.entities.User
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.databinding.ActivityLoginBinding
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu_category.MenuCategoryActivity
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.utils.toast
@@ -36,16 +37,11 @@ class LoginActivity : AppCompatActivity(), AuthListener {
      * Overrided here from AuthListener that called in AuthViewModel
      * if login is succeed
      */
-    override fun onSuccess(loginResponse: LiveData<String>) {
+    override fun onSuccess(user: User) {
 
-        loginResponse.observe(this, Observer {
-            toast(it)
-            Log.d("LOGIN: ", it)
-        })
-
-//        toast("LOGIN SUCCESS!")
-//        val intent = Intent(this, MenuCategoryActivity::class.java)
-//        startActivity(intent)
+        toast("${user.name} is logged in!")
+        val intent = Intent(this, MenuCategoryActivity::class.java)
+        startActivity(intent)
     }
 
     /**
