@@ -18,7 +18,6 @@ interface MyApi {
         @Field("email") email: String,
         @Field("password") password: String
     ) : Response<AuthResponse>
-//    ) : Call<ResponseBody>
 
     companion object {
         operator fun invoke(): MyApi {

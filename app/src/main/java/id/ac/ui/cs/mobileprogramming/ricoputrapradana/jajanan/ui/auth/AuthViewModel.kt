@@ -3,6 +3,7 @@ package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.auth
 import android.view.View
 import androidx.lifecycle.ViewModel
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.data.repository.UserRepository
+import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.utils.ApiException
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.utils.Coroutines
 
 class AuthViewModel : ViewModel() {
@@ -20,13 +21,21 @@ class AuthViewModel : ViewModel() {
         }
 
         Coroutines.main {
-            val response = UserRepository().userLogin(username!!, password!!)
-            if (response.isSuccessful) {
-                authListener?.onSuccess(response.body()?.user!!)
+
+            try {
+                val authResponse = UserRepository().userLogin(username!!, password!!)
+
+                authResponse.user?.let {
+                    authListener?.onSuccess(it)
+                    return@main
+                }
+                authListener?.onFailure(authResponse.message!!)
             }
-            else {
-                authListener?.onFailure("Error Code: ${response.code()}")
+            catch (e: ApiException) {
+                authListener?.onFailure(e.message!!)
             }
+
+
         }
     }
 }
