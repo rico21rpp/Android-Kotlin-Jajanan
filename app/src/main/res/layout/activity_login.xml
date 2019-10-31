@@ -3,7 +3,7 @@
     <data>
         <variable
             name="vm"
-            type="id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.viewmodels.LoginActivityViewModel" />
+            type="id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.auth.AuthViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,7 +11,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".views.LoginActivity"
+        tools:context=".ui.auth.LoginActivity"
         android:padding="8dp">
 
         <EditText
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="LOG IN"
-            android:onClick="onLoginBtnClicked"
+            android:onClick="@{vm::onLoginButtonClicked}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText4" />

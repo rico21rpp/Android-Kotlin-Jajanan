@@ -1,9 +1,8 @@
-package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.views
+package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.R
-import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.views.fragments.MenuFragment
 
 class MenuActivity : AppCompatActivity() {
 
@@ -17,7 +16,8 @@ class MenuActivity : AppCompatActivity() {
         actionBar?.title = "Choose Menu"
         supportActionBar?.title = "Choose Menu"
 
-        val menuFragment = MenuFragment()
+        val menuFragment =
+            MenuFragment()
         fragmentTransaction.add(R.id.menu_fragment, menuFragment)
         fragmentTransaction.commit()
     }

@@ -1,4 +1,4 @@
-package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.views.viewholders
+package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu
 
 import android.content.Context
 import android.view.LayoutInflater

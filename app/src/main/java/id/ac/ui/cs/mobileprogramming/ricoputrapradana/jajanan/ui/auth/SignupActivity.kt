@@ -1,4 +1,4 @@
-package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.views
+package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

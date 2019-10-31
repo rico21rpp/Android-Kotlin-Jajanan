@@ -1,4 +1,4 @@
-package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.views.fragments
+package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu
 
 
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.R
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.models.Menu
-import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.adapters.ListMenuAdapter
+import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu.ListMenuAdapter
 import kotlinx.android.synthetic.main.fragment_menu.*
 
 /**

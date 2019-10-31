@@ -1,9 +1,9 @@
-package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.views
+package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu_category
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.R
-import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.views.fragments.MenuCategoryFragment
+import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu_category.MenuCategoryFragment
 
 class MenuCategoryActivity : AppCompatActivity() {
 
@@ -17,7 +17,8 @@ class MenuCategoryActivity : AppCompatActivity() {
         actionBar?.title = "Menu Category"
         supportActionBar?.title = "Menu Category"
 
-        val menuCategoryFragment = MenuCategoryFragment()
+        val menuCategoryFragment =
+            MenuCategoryFragment()
         fragmentTransaction.add(R.id.menu_category_fragment, menuCategoryFragment)
         fragmentTransaction.commit()
 
