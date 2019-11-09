@@ -21,8 +21,6 @@ import kotlinx.android.synthetic.main.fragment_menu_category.*
 
 class MenuCategoryFragment : Fragment() {
 
-//    lateinit var viewModel : MenuCategoryViewModel
-
     private val categories = listOf(
         MenuCategory("FOOD"),
         MenuCategory("DRINK")
@@ -36,25 +34,14 @@ class MenuCategoryFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-//        val binding: FragmentMenuCategoryBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_menu_category, container, false)
-//        var myView: View = binding.root
-
-//        viewModel = ViewModelProviders.of(this).get(MenuCategoryViewModel::class.java)
-//
-//        Coroutines.main {
-//            viewModel.addCategory(MenuCategory("FOOD"))
-//            viewModel.addCategory(MenuCategory("DRINK"))
-//        }
-
         return inflater.inflate(R.layout.fragment_menu_category, container, false)
-//        return myView
     }
 
-    // populate the views now that the layout has been inflated
+    /**
+     * populate the views immediately when the layout has been inflated
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        var allCategories = viewModel?.allCategories
 
         list_menu_category_recycler_view.apply {
             // set a LinearLayoutManager to handle Android RecyclerView behavior

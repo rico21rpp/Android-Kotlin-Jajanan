@@ -27,8 +27,4 @@ class ListMenuCategoryAdapter(private val list: List<MenuCategory>, val clickLis
     override fun getItemCount(): Int {
         return list.size
     }
-
-//    fun createBinding(parent: ViewGroup, viewType: Int): ViewDataBinding {
-//        return DataBindingUtil.inflate( LayoutInflater.from(parent.context), R.layout.menu_category_list_item, parent,false)
-//    }
 }
