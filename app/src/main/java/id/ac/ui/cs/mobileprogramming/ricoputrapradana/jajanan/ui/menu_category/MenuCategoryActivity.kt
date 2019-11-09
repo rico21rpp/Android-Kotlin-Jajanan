@@ -6,6 +6,8 @@ import android.content.Intent
 import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
+import android.util.Log
 import android.widget.Toast
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.R
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu_category.MenuCategoryFragment
@@ -20,6 +22,7 @@ class MenuCategoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_category)
+        getContacts()
 
         /**
          * Specifies the type of intent this component (MenuCategoryActivity) can receive.
@@ -51,4 +54,20 @@ class MenuCategoryActivity : AppCompatActivity() {
         unregisterReceiver(receiver)
         super.onDestroy()
     }
+
+    /**
+     *
+     */
+    fun getContacts() {
+        val cursor = contentResolver.query(ContactsContract.Contacts.CONTENT_FILTER_URI, null, null, null, null)
+
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                val name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
+                Log.d("contact name: ", name)
+            } while (cursor.moveToNext())
+            cursor.close()
+        }
+    }
+
 }
