@@ -35,18 +35,14 @@
                     android:text="Remaining time: "
                     android:gravity="center_vertical"
                     android:textColor="#000"/>
+
                 <TextView
+                    android:id="@+id/timer"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="2"
-                    android:textColor="#000"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:text=" seconds"
-                    android:textColor="#000"/>
+                    android:text="05:00"
+                    android:textColor="#000" />
             </LinearLayout>
         </FrameLayout>
 
