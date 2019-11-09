@@ -16,8 +16,7 @@ class MenuActivity : AppCompatActivity() {
         actionBar?.title = "Choose Menu"
         supportActionBar?.title = "Choose Menu"
 
-        val menuFragment =
-            MenuFragment()
+        val menuFragment = MenuFragment()
         fragmentTransaction.add(R.id.menu_fragment, menuFragment)
         fragmentTransaction.commit()
     }

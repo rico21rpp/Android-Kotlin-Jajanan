@@ -1,4 +1,4 @@
-package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.data.db
+package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.data.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

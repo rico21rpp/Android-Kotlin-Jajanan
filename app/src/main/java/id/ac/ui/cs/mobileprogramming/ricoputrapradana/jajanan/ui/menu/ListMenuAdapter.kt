@@ -3,8 +3,7 @@ package id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.models.Menu
-import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu.MenuViewHolder
+import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.data.db.entities.Menu
 
 class ListMenuAdapter(private val list: List<Menu>) : RecyclerView.Adapter<MenuViewHolder>() {
 

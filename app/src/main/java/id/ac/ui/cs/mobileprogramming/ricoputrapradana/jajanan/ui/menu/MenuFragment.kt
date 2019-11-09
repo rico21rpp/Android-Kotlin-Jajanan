@@ -9,8 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.R
-import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.models.Menu
-import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.ui.menu.ListMenuAdapter
+import id.ac.ui.cs.mobileprogramming.ricoputrapradana.jajanan.data.db.entities.Menu
 import kotlinx.android.synthetic.main.fragment_menu.*
 
 /**
@@ -19,9 +18,19 @@ import kotlinx.android.synthetic.main.fragment_menu.*
 class MenuFragment : Fragment() {
 
     private val menu = listOf(
-        Menu("baksoberanak", "Bakso Beranak", 20000),
-        Menu("baksokerikil", "Bakso Kerikil", 12000),
-        Menu("baksogranat", "Bakso Granat", 15000)
+         Menu(
+            "baksoberanak",
+            "Bakso Beranak",
+            20000
+        ), Menu(
+            "baksokerikil",
+            "Bakso Kerikil",
+            12000
+        ), Menu(
+            "baksogranat",
+            "Bakso Granat",
+            15000
+        )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
