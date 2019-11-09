@@ -21,12 +21,6 @@ class MenuCategoryActivity : AppCompatActivity() {
 
     lateinit var receiver: BroadcastReceiver
 
-    var remainingTime: Int  = 300
-    var minutes: Int = 0
-    var seconds: Int = 0
-    var handler: Handler = Handler()
-    var runnable: Runnable = Runnable {}
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_category)
@@ -41,34 +35,9 @@ class MenuCategoryActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
-    override fun onStart() {
-//        startTimer()
-        super.onStart()
-    }
-
     override fun onDestroy() {
         unregisterReceiver(receiver)
         super.onDestroy()
-    }
-
-    fun startTimer() {
-        remainingTime = 300
-
-        runnable = object: Runnable {
-            override fun run() {
-
-                timer.text = "05:00"
-                remainingTime--
-
-                minutes = remainingTime / 60
-                seconds = remainingTime % 60
-
-                timer.text = String.format("%02d:%02d", minutes, seconds)
-
-                handler.postDelayed(this, 1000)
-            }
-        }
-        handler.post(runnable)
     }
 
     /**
